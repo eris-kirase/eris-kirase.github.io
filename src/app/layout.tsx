@@ -17,10 +17,10 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   openGraph: {
     type: 'website',
-    url: 'https://eris-kirase.github.io/',
+    url: 'https://eris-kirase.github.io',
     images: [
       {
-        url: 'https://eris-kirase.github.io/' + getImageUrl('ogpimg'),
+        url: 'https://eris-kirase.github.io' + getImageUrl('ogpimg'),
       },
     ],
   },
