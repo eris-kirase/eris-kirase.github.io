@@ -14,13 +14,13 @@ export const metadata: Metadata = {
   description: 'Vライバー綺羅世ヱリスさんのデビュー2周年記念非公式特設サイトです。',
   keywords: ['綺羅世ヱリス', 'eris', 'kirase', 'Vliver'],
   twitter: { card: 'summary_large_image' },
-  robots: { index: true, follow: true }, // ToDo: 著作物の利用確認後Trueへ
+  robots: { index: true, follow: true },
   openGraph: {
     type: 'website',
-    url: 'https://amorsachimai.github.io/eris-kirase/',
+    url: 'https://eris-kirase.github.io/',
     images: [
       {
-        url: 'https://amorsachimai.github.io' + getImageUrl('ogpimg'),
+        url: 'https://eris-kirase.github.io/' + getImageUrl('ogpimg'),
       },
     ],
   },
