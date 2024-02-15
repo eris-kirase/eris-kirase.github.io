@@ -2,25 +2,27 @@
   display: flex;
   width: 100%;
   gap: 32px;
-  @media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 768px) {
+  .sectionContainer {
     flex-direction: column;
     gap: 45px;
   }
 }
-
 /* profile picture */
 .pictureContainer {
   position: relative;
   display: flex;
   width: 50%;
   padding: 5%;
-  @media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 768px) {
+  .pictureContainer {
     width: 100%;
     padding: 10%;
   }
 }
 .pictureIconList {
-  opacity: 0;
   position: absolute;
   display: grid;
   gap: 10px;
@@ -50,7 +52,6 @@
   height: auto;
 }
 .picturesList {
-  opacity: 0;
   position: relative;
   width: 100%;
   height: fit-content;
@@ -78,12 +79,13 @@
 .infoContainer {
   padding: 0 16px;
   width: 50%;
-  @media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 768px) {
+  .infoContainer {
     width: 100%;
   }
 }
 .infoName {
-  opacity: 0;
   flex-direction: column;
   display: flex;
   text-align: center;
@@ -99,14 +101,12 @@
   flex-shrink: 0;
 }
 .infoErisComment {
-  opacity: 0;
   line-height: 26px;
   font-size: 16px;
   font-weight: bold;
   display: inline-block;
 }
 .infoMemo {
-  opacity: 0;
   line-height: 21px;
   font-size: 13px;
   font-weight: bold;
@@ -114,7 +114,6 @@
   margin-top: 32px;
 }
 .infoImageContainer {
-  opacity: 0;
   margin-top: 16px;
   border-radius: 10px;
   overflow: hidden;
@@ -135,7 +134,6 @@
 }
 
 .dataSectionTitle {
-  opacity: 0;
   font-size: 36px;
   font-weight: bold;
 }
@@ -147,7 +145,9 @@
   margin-top: 24px;
   column-count: 2;
   column-gap: 64px;
-  @media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 768px) {
+  .dataList {
     column-count: 1;
   }
 }

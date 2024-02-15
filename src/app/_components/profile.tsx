@@ -8,6 +8,7 @@ import cx from '@/tools/cx'
 import { imageList } from '@/components/image/images'
 import Link from 'next/link'
 import { useInView } from 'react-intersection-observer'
+import { getFading } from '@/styles/getAnimation'
 
 export const ProfileSection: FunctionComponent = () => {
   return (
@@ -24,7 +25,7 @@ export const ProfileSection: FunctionComponent = () => {
 const ProfilePictures: FunctionComponent = () => {
   const [target, setTarget] = useState(1)
   const isViewIconList = useInView({
-    rootMargin: '-20%',
+    rootMargin: '-15%',
     triggerOnce: true,
   })
   const isViewPicList = useInView({
@@ -39,7 +40,7 @@ const ProfilePictures: FunctionComponent = () => {
   }
   return (
     <div className={styles.pictureContainer} style={backgroundStyle}>
-      <ul ref={isViewIconList.ref} className={cx(styles.pictureIconList, 'animate__animated', isViewIconList.inView && 'animate__fadeInUp')}>
+      <ul ref={isViewIconList.ref} className={cx(styles.pictureIconList, getFading(isViewIconList.inView, 'fadeInUp'))}>
         {ProfileImageList.map((icon, index) => {
           return (
             <li
@@ -56,7 +57,7 @@ const ProfilePictures: FunctionComponent = () => {
           )
         })}
       </ul>
-      <ul ref={isViewPicList.ref} className={cx(styles.picturesList, 'animate__animated', isViewPicList.inView && 'animate__fadeIn')}>
+      <ul ref={isViewPicList.ref} className={cx(styles.picturesList, getFading(isViewPicList.inView, 'fadeIn'))}>
         {ProfileImageList.map((icon, index) => {
           return (
             <li key={index} className={cx(styles.pictureItem, icon.id === target && styles.isActive)}>
@@ -91,17 +92,17 @@ const ProfileInfo: FunctionComponent = () => {
   const memo = `人間さんのホットなニュースを人形目線でズバッと切り込む！！見た目からは想像できない鋭い毒舌で時にはリスナーとバトルをすることも！？ぜひ配信に遊びに来てくださいね！`
   return (
     <div className={styles.infoContainer}>
-      <h3 ref={isViewName.ref} className={cx(styles.infoName, 'animate__animated', isViewName.inView && 'animate__fadeInUp')}>
+      <h3 ref={isViewName.ref} className={cx(styles.infoName, getFading(isViewName.inView, 'fadeInUp'))}>
         <span className={styles.infoNameSub}>Kirase Eris</span>
         <span className={styles.infoNameMain}>綺羅世ヱリス</span>
       </h3>
-      <p ref={isViewComment.ref} className={cx(styles.infoErisComment, 'animate__animated', isViewComment.inView && 'animate__fadeInLeft')}>
+      <p ref={isViewComment.ref} className={cx(styles.infoErisComment, getFading(isViewComment.inView, 'fadeInLeft'))}>
         {erisComment}
       </p>
-      <p ref={isViewMemo.ref} className={cx(styles.infoMemo, 'animate__animated', isViewMemo.inView && 'animate__fadeInLeft')}>
+      <p ref={isViewMemo.ref} className={cx(styles.infoMemo, getFading(isViewMemo.inView, 'fadeInLeft'))}>
         {memo}
       </p>
-      <div ref={isViewVideo.ref} className={cx(styles.infoImageContainer, 'animate__animated', isViewVideo.inView && 'animate__fadeInUp')}>
+      <div ref={isViewVideo.ref} className={cx(styles.infoImageContainer, getFading(isViewVideo.inView, 'fadeInUp'))}>
         <Link href="https://twitter.com/Ellie_doll__/status/1641034622350811137" target="_blank">
           <MyImage name="lastRun" alt="ラスラン" width={'100%'} className={styles.infoImage} />
         </Link>
@@ -129,7 +130,7 @@ const ProfileData: FunctionComponent = () => {
   ]
   return (
     <div className={styles.dataContainer}>
-      <h4 ref={ref} className={cx(styles.dataSectionTitle, 'animate__animated', inView && 'animate__fadeInLeft')}>
+      <h4 ref={ref} className={cx(styles.dataSectionTitle, getFading(inView, 'fadeInLeft'))}>
         DATA
       </h4>
       <ul className={styles.dataList}>

@@ -20,7 +20,9 @@
   right: 0;
   margin: 0 auto;
   bottom: 5%;
-  @media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 768px) {
+  .anniversaryLogo {
     bottom: 10%;
   }
 }
