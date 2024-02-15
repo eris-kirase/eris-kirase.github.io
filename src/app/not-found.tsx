@@ -3,13 +3,13 @@ import { CSSProperties } from 'react'
 
 export default function Custom404() {
   const containerStyles: CSSProperties = {
-    height: '85vh',
     width: '100%',
     textAlign: 'center',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    padding: '128px 0',
   }
   const imageStyles: CSSProperties = {
     maxWidth: '500px',

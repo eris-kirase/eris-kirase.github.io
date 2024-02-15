@@ -10,13 +10,13 @@ export const metadata: Metadata = {
 
 export default function Gallery() {
   const containerStyles: CSSProperties = {
-    height: '85vh',
     width: '100%',
     textAlign: 'center',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    padding: '128px 0',
   }
   const imageStyles: CSSProperties = {
     marginTop: '32px',
