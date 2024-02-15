@@ -39,8 +39,8 @@ const ProfilePictures: FunctionComponent = () => {
     height: 'fit-content',
   }
   return (
-    <div className={styles.pictureContainer} style={backgroundStyle}>
-      <ul ref={isViewIconList.ref} className={cx(styles.pictureIconList, getFading(isViewIconList.inView, 'fadeInUp'))}>
+    <div ref={isViewIconList.ref} className={styles.pictureContainer} style={backgroundStyle}>
+      <ul className={cx(styles.pictureIconList, getFading(isViewIconList.inView, 'fadeInUp'))}>
         {ProfileImageList.map((icon, index) => {
           return (
             <li
