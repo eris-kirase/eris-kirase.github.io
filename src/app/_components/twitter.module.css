@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.twitterTimeline {
+  width: 100%;
+  max-width: 600px;
+  @media screen and (max-width: 768px) {
+    max-width: 80%;
+  }
+}
+.followLink {
+  width: 300px;
+  padding: 20px;
+  margin: 64px 0;
+  text-align: center;
+  border: 1px solid #fff;
+}

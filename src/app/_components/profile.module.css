@@ -1,0 +1,170 @@
+.sectionContainer {
+  display: flex;
+  width: 100%;
+  gap: 32px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 45px;
+  }
+}
+
+/* profile picture */
+.pictureContainer {
+  position: relative;
+  display: flex;
+  width: 50%;
+  padding: 5%;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 10%;
+  }
+}
+.pictureIconList {
+  opacity: 0;
+  position: absolute;
+  display: grid;
+  gap: 10px;
+  z-index: 1;
+  right: 0;
+  top: 0;
+}
+.pictureIconItem {
+  position: relative;
+  width: 5.5em;
+  cursor: pointer;
+  transition: filter 0.5s, transform 0.5s;
+}
+.pictureIconItem:hover {
+  filter: brightness(110%);
+  transform: translateY(-1px);
+}
+.pictureIconBoeder {
+  display: block;
+  aspect-ratio: 1/1;
+  border: 2px solid rgb(177, 11, 50);
+  border-radius: 1000px;
+  overflow: hidden;
+}
+.pictureIcon {
+  max-width: 100%;
+  height: auto;
+}
+.picturesList {
+  opacity: 0;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+}
+.pictureItem {
+  display: flex;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  transition: opacity 0.5s;
+  width: 0;
+  height: 0;
+}
+.picture {
+  width: 100%;
+}
+.isActive {
+  position: initial;
+  opacity: 1;
+  width: 100%;
+  height: auto;
+}
+
+/* profile info */
+.infoContainer {
+  padding: 0 16px;
+  width: 50%;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+.infoName {
+  opacity: 0;
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+  padding-bottom: 8px;
+  margin-bottom: 32px;
+  border-bottom: 1px dashed #4a4a4a;
+}
+.infoNameMain {
+  font-size: 36px;
+  font-weight: bold;
+}
+.infoNameSub {
+  flex-shrink: 0;
+}
+.infoErisComment {
+  opacity: 0;
+  line-height: 26px;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+}
+.infoMemo {
+  opacity: 0;
+  line-height: 21px;
+  font-size: 13px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 32px;
+}
+.infoImageContainer {
+  opacity: 0;
+  margin-top: 16px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.infoImageContainer:hover {
+  filter: brightness(103%);
+}
+.infoImageContainer img:hover {
+  filter: brightness(103%);
+  transform: scale(1.1);
+}
+.infoImageContainer a:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+.infoImage {
+  transition: transform 0.5s;
+}
+
+.dataSectionTitle {
+  opacity: 0;
+  font-size: 36px;
+  font-weight: bold;
+}
+.dataContainer {
+  display: block;
+  margin-top: 45px;
+}
+.dataList {
+  margin-top: 24px;
+  column-count: 2;
+  column-gap: 64px;
+  @media screen and (max-width: 768px) {
+    column-count: 1;
+  }
+}
+.dataItem {
+  opacity: 0;
+  margin-bottom: 24px;
+  border-bottom: 1px dashed #4a4a4a;
+}
+.profileData {
+  display: flex;
+  gap: 24px;
+}
+.dataTitle {
+  min-width: 110px;
+}
+.dataValue {
+  line-height: 21px;
+  word-break: break-all;
+  overflow-wrap: break-word;
+}

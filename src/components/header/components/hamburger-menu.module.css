@@ -1,0 +1,114 @@
+.container {
+  height: 30px;
+}
+
+.content {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s;
+}
+
+.logo {
+  width: 250px;
+}
+
+.menu {
+  height: 0;
+  background-color: rgb(177, 11, 50);
+  width: 100%;
+  transition: 0.4s;
+  animation-timing-function: ease-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.95;
+}
+
+.menuBtn:checked ~ .menu {
+  height: 100vh;
+}
+
+.menuBtn:checked ~ .menu .content {
+  visibility: visible;
+  opacity: 1;
+  transition: 1.4s;
+}
+
+.menuBtn {
+  display: none;
+}
+
+.menuIcon {
+  display: inline-block;
+  z-index: 2;
+  position: relative;
+  cursor: pointer;
+  padding: 13px 0px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.navicon {
+  background: #ddd;
+  display: block;
+  height: 3px;
+  width: 26px;
+  position: relative;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+.navicon:before,
+.navicon:after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: #ddd;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+.navicon:before {
+  top: 9px;
+}
+
+.navicon:after {
+  bottom: 9px;
+}
+
+/* Hamburger Menu Animation Start */
+.menuBtn:checked ~ .menuIcon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.menuBtn:checked ~ .menuIcon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.menuBtn:checked ~ .menuIcon:not(.steps) .navicon:before {
+  top: 0;
+}
+.menuBtn:checked ~ .menuIcon:not(.steps) .navicon:after {
+  bottom: 0;
+}
+
+.menuBtn:checked ~ .menuIcon .navicon {
+  background: rgba(0, 0, 0, 0);
+  transition: 0.2192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+/* Hamburger Menu Animation End */
+
+.linkList {
+  display: flex;
+  row-gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+.linkItem {
+  font-size: 16px;
+}

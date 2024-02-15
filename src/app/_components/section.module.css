@@ -1,0 +1,25 @@
+.container {
+  padding: 160px 32px 0;
+  @media screen and (max-width: 768px) {
+    padding: 80px 16px 0;
+  }
+}
+.title {
+  opacity: 0;
+  display: block;
+  text-align: center;
+}
+.mainTitle {
+  text-align: center;
+  font-size: 40px;
+  font-family: serif;
+}
+.ruby {
+  display: block;
+}
+.contents {
+  margin: 64px 0px;
+  @media screen and (max-width: 768px) {
+    margin: 32px 0px;
+  }
+}

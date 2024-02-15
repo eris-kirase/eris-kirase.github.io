@@ -1,0 +1,35 @@
+.sections {
+  display: flex;
+  gap: 30px;
+  justify-content: space-evenly;
+  padding: 64px 0 32px;
+  margin: 0 16px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0 36px;
+    gap: 50px;
+  }
+}
+.section {
+}
+.title {
+}
+.title:after {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background-color: #fff;
+  display: block;
+  margin: 16px 0 32px;
+  @media screen and (max-width: 768px) {
+    margin: 8px auto 16px;
+  }
+}
+
+.content {
+  display: flex;
+  row-gap: 8px;
+  flex-direction: column;
+}
