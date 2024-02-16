@@ -19,4 +19,6 @@ export const imageList = {
   perperEris: require('./perperEris.png').default,
   anniversaryLogo: require('./2yearsanniversarycelebration.png').default,
   ogpimg: require('./ogpImage.png').default,
+  anniversaryThumbnail: require('./2nd-anniversary-thumbnail.jpg').default,
+  tanabataEris: require('./tanabata-eris.jpg').default,
 }
