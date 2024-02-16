@@ -120,7 +120,7 @@ const ProfileData: FunctionComponent = () => {
   const dataList: ProfileList = [
     { title: '誕生日', value: '7月16日' },
     { title: '身長', value: 'ちっちゃい' },
-    { title: '血液型', value: '薔薇108本分' },
+    { title: '体重', value: '薔薇108本分' },
     { title: 'ニックネーム', value: 'ヱちゃん、ヱーちゃん' },
     { title: 'デビュー日', value: '2022年2月9日' },
     { title: '好きなもの', value: 'カシスオレンジ、サラダ軍艦(※諸説あり)' },
