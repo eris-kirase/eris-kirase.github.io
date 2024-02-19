@@ -21,4 +21,6 @@ export const imageList = {
   ogpimg: require('./ogpImage.png').default,
   anniversaryThumbnail: require('./2nd-anniversary-thumbnail.jpg').default,
   tanabataEris: require('./tanabata-eris.jpg').default,
+  wallpaperWashi: require('./wallpaper-washi.png').default,
+  wallpaperRose: require('./wallpaper-rose.png').default,
 }
