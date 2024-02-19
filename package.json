@@ -17,7 +17,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-intersection-observer": "^9.8.0",
-    "react-tweet": "^3.2.0"
+    "react-tweet": "^3.2.0",
+    "swiper": "^11.0.6"
   },
   "devDependencies": {
     "@kuma-ui/next-plugin": "^1.2.0",
