@@ -1,0 +1,7 @@
+.newsContainer {
+  display: flex;
+  gap: 24px;
+}
+.newsItem {
+  height: auto;
+}
